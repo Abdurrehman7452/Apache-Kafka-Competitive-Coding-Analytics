@@ -69,47 +69,48 @@ cat sampledata.txt | ./producer.py problem-events competition-events solution-ev
 
 --- 
 
-📊 Output Overview
-consumer1.py — Language & Category Stats
+## 📊 Output Overview
+**1. consumer1.py** — Language & Category Stats
 
-    Identifies the most frequently used programming language.
+- Identifies the most frequently used programming language.
 
-    Determines the most difficult problem category (lowest pass ratio).
+- Determines the most difficult problem category (lowest pass ratio).
 
-consumer2.py — Leaderboard Computation
+**2. consumer2.py** — Leaderboard Computation
 
-    Calculates points per user using:
+- Calculates points per user using:
 
-        Status score (Passed, TLE, Failed)
+     Status score (Passed, TLE, Failed)
 
-        Difficulty multiplier (Easy, Medium, Hard)
+     Difficulty multiplier (Easy, Medium, Hard)
 
-        Runtime bonus and time penalty
+     Runtime bonus and time penalty
 
-    Outputs a sorted leaderboard per competition.
+- Outputs a sorted leaderboard per competition.
 
-consumer3.py — User Elo & Contributions
+**3. consumer3.py** — User Elo & Contributions
 
-    Computes ELO-style ratings per user based on:
+- Computes ELO-style ratings per user based on:
 
-        Problem/competition submission scores
+     Problem/competition submission scores
 
-        Upvotes from accepted solutions
+     Upvotes from accepted solutions
 
-    Tracks the best contributor (most upvoted user).
-
----
-📌 Notes
-
-    All consumers exit gracefully on receiving the EOF signal.
-
-    Runtime bonus boosts fast code, while time taken applies a penalty.
-
-    Everything is designed to mimic low-latency real-time stream processing.
+- Tracks the best contributor (most upvoted user).
 
 ---
 
-👨‍💻 Author
+## 📌 Notes
+
+-  All consumers exit gracefully on receiving the EOF signal.
+
+-   Runtime bonus boosts fast code, while time taken applies a penalty.
+
+-   Everything is designed to mimic low-latency real-time stream processing.
+
+---
+
+## 👨‍💻 Author
 
 **Muhammad Abdurrehman**
 _Bachelors in Data Science_
